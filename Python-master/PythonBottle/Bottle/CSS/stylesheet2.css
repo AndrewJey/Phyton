@@ -1,0 +1,68 @@
+body
+{
+	background-color: #398439;
+}
+#contenido
+{
+	width: 800px;
+	margin:0 auto;
+	text-align: center;
+}
+h1,h2,label,p,h3,h4
+{
+	color:#ffffff;
+}
+nav ul li
+{
+	display: inline-block;
+	margin-right:90px;
+	cursor: pointer;
+
+}
+nav ul li:hover
+{
+	display: inline-block;
+	margin-right:30px;
+	cursor: pointer;
+	box-shadow: 0px 0px 20px rgba(142,123,342,8);
+}
+.textoPR
+{
+	width: 80%;
+    height: 100%;
+	background-color:black;
+	color: #fff;
+	margin: 0 auto;
+	text-align:left;
+	border-radius: 20px;
+	padding:20px;
+	box-shadow: 0px 0px 20px rgba(0,0,0,8);
+}
+#textoPR h2{
+	color:#e44e24;
+}
+a
+{
+	color:#e44e24;
+	font-weight: bold;
+}
+#miprimercanvas
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+video
+{	
+	box-shadow: 0px 0px 20px rgba(0,0,0,5);
+}
+audio
+{
+	margin: 0 auto;
+	border-radius: 20px;
+	padding:20px;
+	box-shadow: 0px 0px 20px rgba(0,0,0,5);
+	position: absolute;
+
+left: 35%;
+}
