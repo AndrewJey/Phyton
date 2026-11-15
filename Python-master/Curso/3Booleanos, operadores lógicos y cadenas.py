@@ -5,33 +5,33 @@ cadena = 'Texto entre comillas simples'
 texto = "Texto entre comillas dobles"
 
 #type devuelve el tipo de la variable
-print type(cadena)
+print(type(cadena))
 
 #Salto de linea
 cadena = 'Texto entre \n comillas simples'
 
-print "Salto linea"
-print cadena
+print("Salto linea")
+print(cadena)
 
 #Tabulacion
 cadena = 'Texto entre \t comillas simples'
-print "Tabulacion"
-print cadena
+print("Tabulacion")
+print(cadena)
 
 #Mediante comillas triples se puede evitar los caracteres de escape
 cadena="""La cadena
  es
  esta la siguiente
 """
-print cadena
+print(cadena)
 
 #Repeticion de texto
 print ("Repeticion de texto")
-print (texto * 3)
+print((texto * 3))
 
 #Concatenar cadenas
 print("Concatenar cadenas")
-print (texto + "el texto se concateno")
+print((texto + "el texto se concateno"))
 
 print ("\n")
 #OPERADORES BOOLEANOS VERDAD O FALSO
