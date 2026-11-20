@@ -39,3 +39,10 @@ Inventario y compilaciones locales del 2026-11-15. Una compilación correcta no 
 
 `.gitignore` excluye credenciales locales, estado del editor y salidas de las herramientas detectadas. No deja de versionar archivos que ya estaban en Git. Los manifiestos, archivos de bloqueo, recursos fuente y scripts de esquema forman parte del código.
 <!-- local-development:end -->
+
+<!-- improvements-20261119:start -->
+## Mejoras y verificación funcional (2026-11-19)
+
+- **Mejoras aplicadas:** Corrección de bucle infinito en `Apariciones_Numero_enNumero`, dígito incorrecto en `cambiarNumero`, `NameError` en `invertir` y negativos en `ContarDigitos` (`OperacionesBasicas.py`), además de consultas parametrizadas anti-SQLi y escape XSS en `PythonBottle/functions.py`.
+- **Pruebas ejecutadas:** `python -m unittest discover -s tests -v` (2/2 pruebas aprobadas: todas las operaciones aritméticas y CRUD parametrizado/XSS sobre SQLite en memoria).
+<!-- improvements-20261119:end -->

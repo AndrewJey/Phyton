@@ -1,34 +1,59 @@
 __author__ = 'Ronald'
-class Operaciones:
-    def ContarDigitos(num):
-        cont = 0
-        if(num == 0):
-            cont = 1
-        else:
-            while(num > 0):
-                num = num // 10
-                cont = cont + 1
-        return (cont)
 
-    def Apariciones_Numero_enNumero(numero,numerocomprobar):
+
+class Operaciones:
+    @staticmethod
+    def ContarDigitos(num):
+        n = abs(int(num))
+        if n == 0:
+            return 1
         cont = 0
-        while numerocomprobar > 0:
-            if numerocomprobar % 10 == numero:
-                cont = cont + 1
-            numerocomprobar // 10
+        while n > 0:
+            n //= 10
+            cont += 1
         return cont
 
-    def cambiarNumero(x,y,num):
+    @staticmethod
+    def Apariciones_Numero_enNumero(numero, numerocomprobar):
+        digito = abs(int(numero))
+        if digito > 9:
+            raise ValueError('numero debe ser un dígito entre 0 y 9')
+        n = abs(int(numerocomprobar))
+        if n == 0:
+            return 1 if digito == 0 else 0
+        cont = 0
+        while n > 0:
+            if n % 10 == digito:
+                cont += 1
+            n //= 10
+        return cont
+
+    @staticmethod
+    def cambiarNumero(x, y, num):
+        objetivo = abs(int(x))
+        reemplazo = abs(int(y))
+        if objetivo > 9 or reemplazo > 9:
+            raise ValueError('x e y deben ser dígitos entre 0 y 9')
+        signo = -1 if int(num) < 0 else 1
+        n = abs(int(num))
+        if n == 0:
+            return reemplazo if objetivo == 0 else 0
         exp = 0
         nnum = 0
-        while num > 0:
-            if (num % 10 == x):
-                nnum = nnum+ y * 10 ** exp
-            else:
-                nnum =nnum + (num // 10) * 10 **exp
-            num = num//10
-            exp = exp + 1
-        return  nnum
+        while n > 0:
+            digito = n % 10
+            nuevo = reemplazo if digito == objetivo else digito
+            nnum += nuevo * (10 ** exp)
+            n //= 10
+            exp += 1
+        return signo * nnum
 
-    def invertir (num):
-        exp = ContarDigitos(num)
+    @staticmethod
+    def invertir(num):
+        signo = -1 if int(num) < 0 else 1
+        n = abs(int(num))
+        invertido = 0
+        while n > 0:
+            invertido = invertido * 10 + (n % 10)
+            n //= 10
+        return signo * invertido
